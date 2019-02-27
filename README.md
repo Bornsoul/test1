@@ -12,9 +12,9 @@ https://www.youtube.com/watch?v=mcCVzb0t3ZE
 
 *Description.ext에서 제목같은거 설정해주세요!
 
-제작 : Patch
 
-도움 : Zeratulspc
+> 제작 : Patch
+> 도움 : Zeratulspc
 
 ---------------------------------------------------------------
 # [ 명령어 사용법 ]
