@@ -22,9 +22,9 @@ https://www.youtube.com/watch?v=mcCVzb0t3ZE
 [this, 이동 위치, "어디로 이동합니다"] execVM "PHScripts\PH_Move.sqf";
 
 ### 오브젝트에 휠굴려서 여러 대화상호작용 만들기
-` [this, "대화하기", ["하이요.", "반갑습니다.", "오잉?"]] execVM "PHScripts\PH_Say.sqf";`
+> [this, "대화하기", ["하이요.", "반갑습니다.", "오잉?"]] execVM "PHScripts\PH_Say.sqf";
 
-` [this, "대화하기", [format["%1님 반갑습니다!", name player], "하이!"] execVM "PHScripts\PH_Say.sqf";`
+> [this, "대화하기", [format["%1님 반갑습니다!", name player], "하이!"] execVM "PHScripts\PH_Say.sqf";
 
 ### 복장샘플 적용 스크립트 AI유닛에 적용시키면 됩니다.
 [this] execVM "PHScripts\PH_CopyUnit.sqf";
