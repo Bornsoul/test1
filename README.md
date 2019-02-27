@@ -1,5 +1,5 @@
 ---------------------------------------------------------------
-[ 샘플 처음 사용자 ]
+# [ 샘플 처음 사용자 ]
 ---------------------------------------------------------------
 
 https://www.youtube.com/watch?v=mcCVzb0t3ZE
@@ -7,43 +7,41 @@ https://www.youtube.com/watch?v=mcCVzb0t3ZE
 
 샘플버전은 항상 에디터에서 작업 모두 끝나고나서
 마무리 작업때 적용해주시면 좋습니다. ( 구지상관없긴함 )
-Description.ext에서 제목같은거 설정해주세요!
 
+*Description.ext에서 제목같은거 설정해주세요!
 
 ---------------------------------------------------------------
-[ 명령어 사용법 ]
- 복사하셔서 사용하세요 :D
+# [ 명령어 사용법 ]
+  복사하셔서 사용하세요 :D
 ---------------------------------------------------------------
-// 해당 오브젝트를 AU 아스널로 만듭니다.
+# 해당 오브젝트를 AU 아스널로 만듭니다.
+[this] execVM "PHScripts\PH_Arsnal.sqf";
 
- [this] execVM "PHScripts\PH_Arsnal.sqf";
+# 해당 오브젝트에 이동하기 액션을 만듭니다.
+[this, 이동 위치, "어디로 이동합니다"] execVM "PHScripts\PH_Move.sqf";
 
-// 해당 오브젝트에 이동하기 액션을 만듭니다.
+# 오브젝트에 휠굴려서 여러 대화상호작용 만들기
+[this, "대화하기", ["하이요.", "반갑습니다.", "오잉?"]] execVM "PHScripts\PH_Say.sqf";
+[this, "대화하기", [format["%1님 반갑습니다!", name player], "하이!"] execVM "PHScripts\PH_Say.sqf";
 
- [this, 이동 위치, "어디로 이동합니다"] execVM "PHScripts\PH_Move.sqf";
+# 복장샘플 적용 스크립트 AI유닛에 적용시키면 됩니다.
+[this] execVM "PHScripts\PH_CopyUnit.sqf";
 
-// 오브젝트에 휠굴려서 여러 대화상호작용 만들기
- [this, "대화하기", ["하이요.", "반갑습니다.", "오잉?"]] execVM "PHScripts\PH_Say.sqf";
- [this, "대화하기", [format["%1님 반갑습니다!", name player], "하이!"] execVM "PHScripts\PH_Say.sqf";
+# 자막호출 = 홍길동님이 호출 하였습니다.
+[nil, "홍길동", 1] execVM "PHScripts\PH_Call.sqf";
 
-// 복장샘플 적용 스크립트 AI유닛에 적용시키면 됩니다.
- [this] execVM "PHScripts\PH_CopyUnit.sqf";
-
-// 자막호출 = 홍길동님이 호출 하였습니다.
- [nil, "홍길동", 1] execVM "PHScripts\PH_Call.sqf";
-
-// 자막호출 = AU에서 홍길동님이 호출 하였습니다.
+# 자막호출 = AU에서 홍길동님이 호출 하였습니다.
 ["AU", "홍길동", 2] execVM "PHScripts\PH_Call.sqf";
 
-// 자막호출 = AU에서 호출 하였습니다.
+# 자막호출 = AU에서 호출 하였습니다.
 ["AU", nil, 3] execVM "PHScripts\PH_Call.sqf";
 
-// 자막호출 = 홍길동님이 멍청이을(를) 브리핑실로 호출 하였습니다.
+# 자막호출 = 홍길동님이 멍청이을(를) 브리핑실로 호출 하였습니다.
 ["멍청이", "홍길동", 4] execVM "PHScripts\PH_Call.sqf";
 
 
 ---------------------------------------------------------------
-[ 수정내역 ]
+# [ 수정내역 ]
 ---------------------------------------------------------------
 2019.02.27
 - 수정내역 작성시작
